@@ -6,8 +6,8 @@ public class Main {
         String firstAuthor = "Rowling Joanne";
         String secondAuthor = "Lewis Carrol";
 
-        Author joanne = new Author("Joanne", "Rowling");
-        Author carrol = new Author("Carrol", "Lewis");
+        Author joanne = new Author("Joanne ", "Rowling");
+        Author carrol = new Author("Carrol ", "Lewis");
         Book harry = new Book(firstBook, joanne, 2014);
         Book alice = new Book(secondBook, carrol, 2000);
         System.out.println(harry);
@@ -26,6 +26,9 @@ public class Main {
 
         System.out.println(harry.hashCode());
         System.out.println(firstAuthor.hashCode());
+
+        System.out.println(carrol);
+        System.out.println(joanne);
     }
 
 }
