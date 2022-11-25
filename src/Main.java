@@ -8,10 +8,13 @@ public class Main {
 
         Author joanne = new Author("Joanne ", "Rowling");
         Author carrol = new Author("Carrol ", "Lewis");
+
         Book harry = new Book(firstBook, joanne, 2014);
         Book alice = new Book(secondBook, carrol, 2000);
+
         System.out.println(harry);
         System.out.println(alice);
+
         harry.setPublicationYear(2020);
         System.out.println(harry);
 

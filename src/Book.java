@@ -1,9 +1,8 @@
 public class Book {
     private String nameBook;
-
     private int publicationYear;
-
     private Author auth;
+
     public Book(String nameBook, Author fullName, int publicationYear) {
         this.nameBook = nameBook;
         this.publicationYear = publicationYear;
@@ -13,14 +12,16 @@ public class Book {
     public String getNameBook() {
         return this.nameBook;
     }
-    public String getNameAuthor(){
-        return  this.auth.getFirstName()+" "+this.auth.getLastName();
+
+    public String getNameAuthor() {
+        return this.auth.getFirstName() + " " + this.auth.getLastName();
     }
 
     public int getPublicationYear() {
         return this.publicationYear;
     }
-    public void setPublicationYear(int year){
+
+    public void setPublicationYear(int year) {
         this.publicationYear = year;
     }
 
@@ -43,6 +44,8 @@ public class Book {
                 (this.auth.equals(compareBook.auth));
     }
 
+
+    @Override
     public int hashCode() {
         int res1;
         if (this.nameBook == null) res1 = 0;

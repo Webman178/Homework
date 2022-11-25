@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Author {
     private String firstName;
     private String lastName;
@@ -28,14 +30,9 @@ public class Author {
                 this.lastName.equals(toCompareAuthor.lastName);
     }
 
+    @Override
     public int hashCode() {
-        int result1;
-        int result2;
-        if (this.firstName == null) result1 = 0;
-        else result1 = this.firstName.hashCode();
-        if (this.lastName == null) result2 = 0;
-        else result2 = this.lastName.hashCode();
-        return result2 + result1;
+        return Objects.hash(firstName, lastName);
     }
 
     public String toString() {
